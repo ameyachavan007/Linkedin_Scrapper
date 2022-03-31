@@ -1,0 +1,25 @@
+{
+    "name": "GLS",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    
+    
+     "content_scripts": [
+        {
+            "matches": ["https://*.linkedin.com/*"],
+            "js": ["scripts/content.js"]
+        }
+    ],
+    "icons": {
+        "128": "logo.png"
+    },
+    "background":{
+        "scripts":["scripts/events.js"]
+    },
+
+    "browser_action":{
+        "default_icon":"logo.png",
+        "default_popup":"views/popup.html",
+        "default_title":"GLS"
+    }
+}
